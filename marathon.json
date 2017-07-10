@@ -1,0 +1,23 @@
+{
+  "id": "logging-bench",
+  "cmd": "python3 -m http.server 8080",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "bryanlatten/docker-logging-bench",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 3000, "hostPort": 0 }
+      ]
+    }
+  },
+  "healthChecks": [
+  {
+    "gracePeriodSeconds": 10,
+    "intervalSeconds": 5,
+    "maxConsecutiveFailures": 0,
+    "path": "/?n=1000&l=1024",
+    "portIndex": 0,
+    "protocol": "HTTP"
+  }]
+}

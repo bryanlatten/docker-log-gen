@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: logging-bench
+spec:
+  containers:
+  - name: logging-bench
+    image: bryanlatten/docker-logging-bench
+    ports:
+    - containerPort: 3000
+    livenessProbe:
+      httpGet:
+        path: /?n=1000&l=1024
+        port: 3000
+      initialDelaySeconds: 10
+      periodSeconds: 5
