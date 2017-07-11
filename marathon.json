@@ -1,10 +1,9 @@
 {
-  "id": "logging-bench",
-  "cmd": "python3 -m http.server 8080",
+  "id": "log-gen",
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "bryanlatten/docker-logging-bench",
+      "image": "bryanlatten/docker-log-gen",
       "network": "BRIDGE",
       "portMappings": [
         { "containerPort": 3000, "hostPort": 0 }

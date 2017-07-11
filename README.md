@@ -17,7 +17,7 @@ A quick and dirty to spew logs for benchmarking purposes. Intended for use in a 
 
 ### Basic Usage
 
-- Run container with its exposed web port, `docker run -p 3000:3000 bryanlatten/docker-logging-bench`
+- Run container with its exposed web port, `docker run -p 3000:3000 bryanlatten/docker-log-gen`
 - Spits out random lorem ipsum-generated log lines per request to `/` on the web interface
 - Customize the output based on the following querystring parameters:
 
@@ -32,7 +32,7 @@ l | l=1024 | 32 | Number of bytes to log per line
 Run the container, using the healthcheck's frequency + querystring parameters to predictably control the scale of throughput. Or, hit `/` with standard benchmarking tools (`ab`, `jmeter`, `gatling`, `locust.io`) for maximum output.
 
 - `marathon.json`: sample DC/OS application definition
-- `manifest.yaml`: sample Kubernetes definition (as a ServiceController)
+- `manifest.yaml`: sample Kubernetes Pod definition
 
 ### TODO
 

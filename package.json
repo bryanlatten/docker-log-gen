@@ -1,8 +1,8 @@
 {
-  "name": "docker-logging-bench",
+  "name": "docker-log-gen",
   "version": "0.1.0",
-  "license" : "Apache-2.0",
-  "repository": "https://github.com/bryanlatten/docker-logging-bench",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/bryanlatten/docker-log-gen",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -14,18 +14,10 @@
     "debug": "^2.6.8",
     "express": "^4.15.3",
     "express-validator": "^3.2.1",
-    "getlorem": "^1.0.1",
-    "morgan": "^1.8.2"
+    "getlorem": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint": "^3.19.0",
-    "eslint-config-google": "^0.7.1",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-behance": "^1.1.0",
-    "eslint-plugin-import": "^2.6.1",
-    "eslint-plugin-node": "^4.2.2",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint": "^3.19.0"
   }
 }
