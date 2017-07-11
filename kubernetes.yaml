@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: logging-bench
+  name: log-gen
 spec:
   containers:
-  - name: logging-bench
-    image: bryanlatten/docker-logging-bench
+  - name: log-gen
+    image: bryanlatten/docker-log-gen
     ports:
     - containerPort: 3000
     livenessProbe:

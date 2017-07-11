@@ -1,12 +1,9 @@
 var express = require('express');
-var path = require('path');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var getLorem = require('getlorem');
 
 var app = express();
-
-// app.use(logger('dev'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
