@@ -27,7 +27,7 @@ n | n=100 | 1 | Number of log lines to produce per request
 l | l=1024 | 64 | Number of bytes to log per output
 d | d=0 | 1 | Adds ISO 8601 date to each output
 i | i=TRANSACTION_ID | (none) | Identifier to add per line
-s | s=\/ | ` | ` | Separates line components from each other
+s | s=\/ | ` \| ` | Separates line components from each other
 x | x=0 | 1 | Adds a consistently-spaced counter to each output
 
 
