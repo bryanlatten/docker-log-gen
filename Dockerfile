@@ -7,5 +7,5 @@ WORKDIR /app
 
 RUN export NODE_ENV=production && npm install
 
-ENTRYPOINT ["/usr/bin/npm", "start"]
+ENTRYPOINT ["./bin/start"]
 
