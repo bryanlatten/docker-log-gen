@@ -1,19 +1,8 @@
 # docker-log-gen
 A quick and dirty to spew logs for benchmarking purposes. Can operate in several modes:
-1. As a standalone container, using command-line flags to determine logging quantity and options. Acts in a similar manner to `ab`
-1. As a web server, using query-string options to determine logging quantity and options
-1. As part of a container orchestration system, like DC/OS or k8s, using the system's healthcheck to periodically force log generation
-
-### Pre-reqs
-- docker (1.12+ recommended)
-- nodejs (8.0+)
-- npm (5.0+)
-
-### Local Development
-
-1. Clone repo, `cd docker-log-gen`
-1. Install dependencies, `npm i`
-1. Run the app `./bin/start` or `node ./bin/start`
+- As a standalone container, using command-line flags to determine logging quantity and options. Acts in a similar manner to `ab`
+- As a web server, using query-string options to determine logging quantity and options
+- As part of a container orchestration system, like DC/OS or k8s, using the system's healthcheck to periodically force log generation
 
 ### Basic CLI Usage
 - `docker run bryanlatten/docker-log-gen`
@@ -56,10 +45,8 @@ Run the container, using the healthcheck's frequency + query-string parameters t
 - `marathon.json`: sample DC/OS application definition
 - `manifest.yaml`: sample Kubernetes Pod definition
 
-
 ### Local Development
 
-1. Pre-reqs: docker (1.12+ recommended), nodejs (8.0+), npm (5.0+)
-1. Clone repo
-1. `npm i`
-1. `npm start`
+1. Clone repo, `cd docker-log-gen`
+1. Install dependencies, `npm i`
+1. Run the app `./bin/start` or `node ./bin/start`
