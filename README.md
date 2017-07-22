@@ -1,5 +1,5 @@
 # docker-log-gen
-A quick and dirty to spew logs for benchmarking purposes. Can operate in several modes:
+A quick and dirty tool to spew logs for benchmarking purposes. Can operate in several modes:
 - As a standalone container, using command-line flags to determine logging quantity and options. Acts in a similar manner to `ab`
 - As a web server, using query-string options to determine logging quantity and options
 - As part of a container orchestration system, like DC/OS or k8s, using the system's healthcheck to periodically force log generation
