@@ -6,7 +6,8 @@
     "module": true,
     "console": true,
     "process": true,
-    "setInterval": true
+    "setInterval": true,
+    "clearInterval": true
   },
   "rules":{
     "no-console":0
