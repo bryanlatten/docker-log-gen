@@ -16,6 +16,7 @@ A quick and dirty tool to spew logs for benchmarking purposes. Can operate in se
     -n, --number <size>       Number of outputs to perform (default 10 )
     -l, --length <size>       Bytes to log per output (default 64 bytes)
     -d, --dated               Include date per output (default 0)
+    -c, --counter             Include a consistently-spaced counter to each output (default 1)
     -i, --identifier <text>   Add an identifier per outputs
     -r, --repeat <delay>      Repeat output every X seconds (default 2 sec), 0 to disable, incompatible with -w
     -s, --separator <symbol>  Use a symbol to separate log components (default  |  )
