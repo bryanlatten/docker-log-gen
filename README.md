@@ -24,7 +24,7 @@ A quick and dirty tool to spew logs for benchmarking purposes. Can operate in se
 ```
 
 ### Web Server Usage
-- Run container with its exposed web port, `docker run -p 3000:3000 bryanlatten/docker-log-gen`
+- Run container with its exposed web port, `docker run -p 3000:3000 bryanlatten/docker-log-gen -w`
 - Spits out random lorem ipsum-generated log lines per request to `/` on the web interface
 - Customize the output based on the following querystring parameters:
 
@@ -35,7 +35,7 @@ l | l=1024 | 64 | Number of bytes to log per output
 d | d=0 | 1 | Adds ISO 8601 date to each output
 i | i=TRANSACTION_ID | (none) | Identifier to add per line
 s | s=\/ | ` \| ` | Separates line components from each other
-x | x=0 | 1 | Adds a consistently-spaced counter to each output
+c | c=0 | 1 | Adds a consistently-spaced counter to each output
 
 
 ### Clustered Usage, via DC/OS (Marathon) or Kubernetes
