@@ -20,6 +20,7 @@ A quick and dirty tool to spew logs for benchmarking purposes. Can operate in se
     -i, --identifier <text>   Add an identifier per outputs
     -r, --repeat <delay>      Repeat output every X seconds (default 2 sec), 0 to disable, incompatible with -w
     -s, --separator <symbol>  Use a symbol to separate log components (default  |  )
+    -m, --multiline           Add newline and tab control characters into each output
     -w, --web                 Launch an HTTP server to log only during requests (default port = 3000)
     -h, --help                output usage information
 ```

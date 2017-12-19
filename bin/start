@@ -21,6 +21,7 @@ program
   .option('-i, --identifier <text>', 'Add an identifier per outputs')
   .option('-r, --repeat <delay>', 'Repeat output every X seconds (default ' + config.defaultRepeatDelay + ' sec), 0 to disable, incompatible with -w')
   .option('-s, --separator <symbol>', 'Use a symbol to separate log components (default ' + config.defaultSpacer + ' )')
+  .option('-m, --multiline', 'Add newline and tab control characters')
   .option('-w, --web', 'Launch an HTTP server to log only during requests (default port = ' + config.defaultPort + ')')
 
   .parse(process.argv);
@@ -32,7 +33,8 @@ var options = {
   dated: program.dated,
   spacer: program.separator || config.defaultSpacer,
   counter: (program.counter !== undefined) ? program.counter : config.defaultLineCount,
-  repeat: program.repeat || config.defaultRepeatDelay
+  repeat: program.repeat || config.defaultRepeatDelay,
+  multiline: program.multiline
 };
 
 var output = ()=> { generator.produce(options.number, options.length, options); };
