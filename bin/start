@@ -6,12 +6,10 @@
 const program = require('commander');
 const generator = require('../lib/generator');
 const config = require('../lib/config');
-const VERSION = '1.0.1'
 
-console.log('docker-log-gen, Version ' + VERSION);
+console.log('docker-log-gen: started ' + new Date());
 
 program
-  .version(VERSION)
   .description('A quick and dirty tool to spew logs for benchmarking purposes')
   .usage('[options]')
   .option('-n, --number <size>', 'Number of outputs to perform (default ' + config.defaultLogLines + ' )')
@@ -37,7 +35,7 @@ var options = {
   multiline: program.multiline
 };
 
-var output = ()=> { generator.produce(options.number, options.length, options); };
+var output = () => (generator.produce(options.number, options.length, options));
 
 if (!program.web) {
 
@@ -73,7 +71,7 @@ server.listen(port);
 server.on('error', onError);
 
 var stopServer = () => {
-  console.log('Stopping server...');
+  console.log('Stopping web server...');
   server.close(() => { process.exit(0); })
 };
 

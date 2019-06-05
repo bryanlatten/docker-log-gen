@@ -5,6 +5,7 @@
     "docker": {
       "image": "bryanlatten/docker-log-gen",
       "network": "BRIDGE",
+      "cmd": "npm run web",
       "portMappings": [
         { "containerPort": 3000, "hostPort": 0 }
       ]
@@ -15,7 +16,7 @@
     "gracePeriodSeconds": 10,
     "intervalSeconds": 5,
     "maxConsecutiveFailures": 0,
-    "path": "/?n=1000&l=1024",
+    "path": "/?n=100&l=100&c=1",
     "portIndex": 0,
     "protocol": "HTTP"
   }]

@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:9
+FROM mhart/alpine-node:12
 
 # Ensure application code makes it into the /app directory
 COPY ./ /app/
@@ -6,6 +6,8 @@ COPY ./ /app/
 WORKDIR /app
 
 RUN export NODE_ENV=production && npm install
+
+EXPOSE 3000
 
 ENTRYPOINT ["./bin/start"]
 
