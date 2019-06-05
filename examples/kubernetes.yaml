@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-gen
+spec:
+  selector:
+    matchLabels:
+      run: log-gen
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: log-gen
+    spec:
+      containers:
+      - name: log-gen
+        image: bryanlatten/docker-log-gen
+        command: ["npm", "run", "web"]
+        ports:
+        - containerPort: 3000
+        livenessProbe:
+              httpGet:
+                path: /?n=100&l=100&c=1
+                port: 3000
+              initialDelaySeconds: 10
+              periodSeconds: 5

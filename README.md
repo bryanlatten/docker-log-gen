@@ -44,8 +44,8 @@ c | c=0 | 1 | Adds a consistently-spaced counter to each output
 
 Run the container, using the healthcheck's frequency + query-string parameters to predictably control the scale of throughput. Or, hit `/` with standard benchmarking tools (`ab`, `jmeter`, `gatling`, `locust.io`) for maximum output.
 
-- `marathon.json`: sample DC/OS application definition
-- `manifest.yaml`: sample Kubernetes Pod definition
+- `examples/marathon.json`: sample DC/OS application definition
+- `examples/kubernetes.yaml`: sample Kubernetes Pod definition
 
 ### Local Development
 
