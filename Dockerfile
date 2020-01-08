@@ -5,7 +5,7 @@ COPY ./ /app/
 
 WORKDIR /app
 
-RUN export NODE_ENV=production && npm install
+RUN export NODE_ENV=production && npm ci
 
 EXPOSE 3000
 
