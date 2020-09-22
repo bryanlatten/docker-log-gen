@@ -51,4 +51,4 @@ Run the container, using the healthcheck's frequency + query-string parameters t
 
 1. Clone repo, `cd docker-log-gen`
 1. Install dependencies, `npm i`
-1. Run the app `./bin/start` or `node ./bin/start`
+1. Run the app through `npm start` (cli) or `npm run web` (http interface) or through basic cli: `node index`
